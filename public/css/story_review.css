@@ -1,0 +1,85 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Container tổng */
+.container {
+    display: flex;
+    max-width: 1200px;    /* Độ rộng tối đa của container */
+    margin: 20px auto;    /* Căn giữa container */
+    gap: 20px;            /* Khoảng cách giữa section và aside */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Nền trắng cho container */
+    flex-wrap: wrap;  /* Cho phép các phần tử trong container được quấn lại khi không đủ không gian */
+}
+
+/* Section chiếm 3/4 */
+#section {
+    flex: 3;
+    background-color: #F9F9F9;  /* Màu nền nhẹ cho section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Aside chiếm 1/4 */
+#aside {
+    flex: 1;
+    background-color: #F1F1F1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 200px;  /* Đảm bảo chiều cao tối thiểu cho aside */
+}
+
+/* Căn chỉnh text và khoảng cách trong section và aside */
+#section, #aside {
+    box-sizing: border-box;
+}
+
+/* Responsive: Xếp chồng lên nhau khi màn hình nhỏ */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;  /* Chuyển container sang chiều dọc trên màn hình nhỏ */
+    }
+
+    #section, #aside {
+        width: 100%;  /* Đảm bảo chiều rộng chiếm hết không gian khi màn hình nhỏ */
+    }
+}
+
+#stories-container .story-detail .story-image {
+    width: 218px;
+    height: 321px;
+    object-fit: cover;  /* Đảm bảo hình ảnh được cắt và căn chỉnh đúng tỷ lệ */
+    max-width: 100%;    /* Đảm bảo không vượt quá kích thước của container */
+    max-height: 100%;   /* Đảm bảo không vượt quá chiều cao của container */
+}
+
+
+/* Cấu trúc cho nút "Đọc chuyện" */
+#read-more-btn {
+    display: block;
+    margin: 20px auto;  /* Đặt nút ở giữa và cách đều phần trên dưới */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;  /* Đặt độ rộng cho nút */
+}
+
+#read-more-btn:hover {
+    background-color: #0056b3;
+}

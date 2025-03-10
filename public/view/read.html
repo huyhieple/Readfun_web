@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Readfun </title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Doc truyen, tieu thuyet" />
+        <meta name="author" content="hiperose" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/header.css" />
+        <link rel="stylesheet" href="../css/navbar.css" />
+        <link rel="stylesheet" href="../css/read.css" />
+    </head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <body>
+  
+        <header class="header">
+            <!-- Logo và tiêu đề bên trái -->
+            <div class="header-left">
+                <a class="header-brand" href="#">
+                    <img id="logo" src="../../image/logo/logo.png" alt="Logo" width="70" height="70">
+                </a>
+                <h1 id='Readfun'> Readfun </h1>
+            </div>
+        
+            <!-- Ô tìm kiếm ở giữa -->
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">
+                        <img src="../../image/public/search.png" alt="Search">
+                    </span>
+                    <input type="text" class="search-input" id="search-input" placeholder="Tìm kiếm truyện">
+                </div>
+
+                <!-- Menu thả xuống -->
+                <ul class="search-dropdown" id="search-dropdown">
+
+                </ul>
+            </div>
+        </header>
+
+
+        <nav class="navbar">
+            <ul class="navbar-menu">
+                    <li class="dropdown">
+                        <a href="#">Thể loại <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Tiên Hiệp</a></li>
+                            <li><a href="#">Kiếm Hiệp</a></li>
+                            <li><a href="#">Ngôn Tình</a></li>
+                            <li><a href="#">Đam Mỹ</a></li>
+                            <li><a href="#">Huyền Huyễn</a></li>
+                            <li><a href="#">Đô Thị</a></li>
+                            <li><a href="#">Khoa Huyễn</a></li>
+                            <li><a href="#">Hài Hước</a></li>
+                            <li><a href="#">Phiêu Lưu</a></li>
+                            <li><a href="#">Trinh Thám</a></li>
+                            <li><a href="#">Viễn Tưởng</a></li>
+                            <li><a href="#">Kinh Dị</a></li>
+                            <li><a href="#">Xuyên Không</a></li>
+                            <li><a href="#">Cổ Đại</a></li>
+                            <li><a href="#">Hệ Thống</a></li>
+                            <li><a href="#">Võng Du</a></li>
+                            <li><a href="#">Mạt Thế</a></li>
+                            <li><a href="#">Điền Văn</a></li>
+                            <li><a href="#">Quân Sự</a></li>
+                            <li><a href="#">Lịch Sử</a></li>
+                            <li><a href="#">Ma Pháp</a></li>
+                            <li><a href="#">Siêu Nhiên</a></li>
+                            <li><a href="#">Truyện Teen</a></li>
+                            <li><a href="#">Bách Hợp</a></li>
+                        </ul>
+                    </li>
+
+                <li class="dropdown">
+                    <a href="#">Phân loại theo chương <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dưới 100 chương</a></li>
+                        <li><a href="#">100 - 500 chương</a></li>
+                        <li><a href="#">500 - 1000 chương</a></li>
+                        <li><a href="#">Trên 1000 chương</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Top truyện</a></li>
+            </ul>
+        </nav>
+        
+        <section id="section" class="truyen-container">
+                    <h2 id="chapter-title">Tiêu đề chương</h2>
+                    <div id="chapter-content">Nội dung chương sẽ được hiển thị ở đây.</div>
+                </div>        
+                <div class="button-container">
+                    <button id="previous" class="button">Trước</button> 
+                    <button id="next" class="button">Sau</button>
+                </div>
+        </section>
+
+        <script src="../js/ajax/home/ajx_search.js"></script>
+        <script src="../js/ajax/readChapter/ajx_readChapter.js"></script>
+        
+
+    </body>
+</html>

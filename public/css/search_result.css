@@ -1,0 +1,101 @@
+/* Căn chỉnh container tìm kiếm */
+.search-container {
+    position: relative;
+    width: 300px; /* Điều chỉnh độ rộng nếu cần */
+    margin-bottom: 20px; /* Thêm khoảng cách phía dưới nếu cần */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+    position: relative;  /* Đảm bảo z-index hoạt động */
+    z-index: 2; /* Cao hơn dropdown một chút để không bị che */
+}
+
+.search-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+/* Menu thả xuống */
+#search-dropdown {
+    position: absolute;  /* Đảm bảo dropdown theo mốc của .search-container */
+    top: calc(100% + 5px);  /* Đặt ngay dưới ô search, thêm khoảng cách 5px */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 300px; /* Giới hạn chiều cao tối đa */
+    overflow-y: auto; /* Tạo thanh cuộn khi vượt quá chiều cao */
+    display: none;  /* Ẩn mặc định, hiện khi có dữ liệu */
+    z-index: 1; /* Giảm z-index để không nổi cao hơn nền */
+    border-radius: 0 0 5px 5px; /* Bo góc dưới cho đẹp */
+}
+
+/* Các mục trong menu */
+.search-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;  /* Cách lề trái phải cho cân đối */
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.search-item:last-child {
+    border-bottom: none;
+}
+
+.search-item:hover {
+    background-color: #f0f0f0;
+}
+
+.item-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: bold;
+    color: #333;
+}
+
+.author {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Thanh cuộn tùy chỉnh */
+#search-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+#search-dropdown::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+#search-dropdown::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}

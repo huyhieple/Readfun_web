@@ -1,0 +1,109 @@
+/* Đặt nền và cấu trúc cơ bản */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #F4F3F3;
+}
+
+/* Header chính (cố định khi cuộn) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* Logo bên trái, ô tìm kiếm ở giữa */
+    padding: 10px 20px;
+    background-color: #8EC1C5;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;    /* Giữ cố định trên cùng */
+    top: 0;             /* Căn trên cùng của trang */
+    z-index: 1000;      /* Đảm bảo nằm trên các phần tử khác */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* Đổ bóng nhẹ dưới header */
+}
+
+/* Gom nhóm logo và tiêu đề bên trái */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Khoảng cách giữa logo và chữ "Readfun" */
+}
+
+/* Tạo khoảng trống để nội dung không bị che */
+body {
+    padding-top: 90px; /* Tạo khoảng trống bằng chiều cao của header để không bị che */
+    background-color: #F4F3F3;
+}
+
+/* Logo */
+.header-brand {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 8px;  /* Bo góc nhẹ cho logo */
+}
+
+/* Tiêu đề */
+#Readfun {
+    margin: 0;
+    color: #FFF090;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);  /* Đổ bóng nhẹ cho tiêu đề */
+}
+
+/* Ô tìm kiếm */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Căn giữa ô tìm kiếm trong phần tử cha */
+    flex-grow: 1;             /* Chiếm khoảng trống để căn giữa */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 5px;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Icon tìm kiếm */
+.search-icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: #F4F3F3; /* Nền nhẹ cho icon */
+}
+
+/* Ô nhập tìm kiếm */
+.search-input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px 10px;
+    min-width: 0;  /* Ngăn input bị tràn khi thiếu chỗ */
+    background-color: transparent;
+}
+
+/* Placeholder cho ô tìm kiếm */
+.search-input::placeholder {
+    color: #aaa;
+}
+
+/* Đổi màu khi rê chuột vào icon tìm kiếm */
+.search-icon img:hover {
+    background-color: #E0E0E0;
+    transition: background-color 0.3s ease;
+}

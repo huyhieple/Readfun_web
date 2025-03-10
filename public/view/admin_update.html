@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Cập nhật truyện</title>
+    <link rel="stylesheet" href="../css/admin/navbar.css">
+    <link rel="stylesheet" href="../css/admin/admin_update.css">
+    <link rel="stylesheet" href="../css/admin/search.css">
+
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <!-- logo    -->
+        <a class="navbar-brand" href="#">
+            <img id="logo" src="../../image/logo/logo.png" alt="Logo" width="70" height="70">
+        </a>
+        <h1 id='Readfun' style="color: #FFF090;"> Readfun </h1>
+        <!-- search -->
+        <div class="search-container">
+            <div class="search-box">
+                <span class="search-icon">
+                    <img src="../../image/public/search.png" alt="Search">
+                </span>
+                <input type="text" class="search-input" id="search-input" placeholder="Tìm kiếm truyện">
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="update-form">
+            <input type="hidden" id="idTruyen" value=""> <!-- ID của truyện cần cập nhật -->
+        
+            <!-- Thêm nhãn Tên truyện -->
+            <label for="name">Tên truyện</label>
+            <input type="text" id="name" placeholder="Tên truyện">
+        
+            <!-- Thêm nhãn Tác giả -->
+            <label for="author">Tác giả</label>
+            <input type="text" id="author" placeholder="Tác giả">
+        
+            <!-- Thêm nhãn Thể loại -->
+            <label for="theloai">Thể loại</label>
+            <input type="text" id="theloai" placeholder="Thể loại (cách nhau bởi dấu phẩy)">
+        
+            <!-- Thêm nhãn Mô tả -->
+            <label for="description">Mô tả</label>
+            <textarea id="description" placeholder="Mô tả"></textarea>
+        
+            <!-- Thêm nhãn Trạng thái -->
+            <label for="status">Trạng thái</label>
+            <select id="status">
+                <option value="">Chọn trạng thái</option>
+                <option value="Đang ra">Đang ra</option>
+                <option value="Đã hoàn thành">Đã hoàn thành</option>
+                <option value="Tạm ngưng">Tạm ngưng</option>
+            </select>
+        
+            <!-- Thêm nhãn Ảnh truyện -->
+            <label for="truyenImage">Ảnh truyện</label>
+            <img id="truyenImage" src="" alt="Ảnh truyện" style="max-width: 300px; display: block; margin-bottom: 10px;">
+        
+            <button id="updateBtn">Cập nhật</button>
+        </div>
+
+        <div class="sidebar">
+             <p>Kết quả tìm kiếm truyện <p>
+            <div id="search-results"></div>  
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/ajax/ajx_admin_update.js"></script>
+    <script src="../js/ajax/ajx_search.js"></script>
+
+</body>
+</html>

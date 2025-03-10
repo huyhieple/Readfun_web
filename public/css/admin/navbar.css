@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #F4F3F3;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-height: 25vh;
+    overflow: hidden;
+    background-color: #8EC1C5;
+    /* Giữ cố định navbar khi cuộn */
+    position: fixed;   /* Giữ cố định trên cùng */
+    top: 0;            /* Căn trên cùng của trang */
+    z-index: 1000;     /* Đảm bảo nằm trên các phần tử khác */
+}
+
+body {
+    padding-top: 80px; /* Tạo khoảng trống bằng chiều cao của navbar để không bị che */
+    background-color: #F4F3F3;
+}
+
+.navbar-brand {
+    margin-left: 25px;
+    flex-shrink: 0;         /* Ngăn logo bị thu nhỏ khi màn hình nhỏ lại */
+}
+
+#logo {
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    align-items: center;
+    flex-grow: 1;             /* Cho phép search-box giãn ra nếu cần */
+    flex-basis: 400px;        /* Giữ không gian tối thiểu cho ô tìm kiếm */
+    min-width: 300px;         /* Giới hạn chiều rộng tối thiểu để không bị bóp nhỏ quá */
+    box-sizing: border-box;   /* Đảm bảo padding không gây tràn */
+    margin-right: 400px;       /* Dịch sang phải 100px */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;        /* Tăng độ bo tròn cho hộp tìm kiếm */
+    padding: 5px;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;     /* Thêm màu nền nếu cần */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Đổ bóng nhẹ cho đẹp hơn */
+    overflow: hidden;           /* Cắt gọn nếu có phần tử bên trong tràn */
+}
+
+.search-icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    border-radius: 50%;         /* Bo tròn icon thành hình tròn */
+    padding: 2px;               /* Khoảng cách giữa icon và viền (tùy chọn) */
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px;
+    min-width: 0;             /* Ngăn input bị tràn khi thiếu chỗ */
+}

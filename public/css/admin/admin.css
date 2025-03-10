@@ -1,0 +1,152 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #F4F3F3;
+}
+/* login, sigh up */
+.auth-buttons a {
+    text-decoration: none; /* Xóa gạch chân của link */
+}
+
+.content-container{
+    background-image: url('../../../image/public/b.jpg'); /* Đường dẫn ảnh nền */
+}
+.btn {
+    padding: 5px 15px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #3498db;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+/* menu */
+/* Cài đặt chung cho navbar */
+.navbar {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* Dropdown menu ẩn mặc định */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hiển thị dropdown menu khi hover vào nav-item */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* content container ----------------------------------------------------------------------------*/ 
+/* Cài đặt chung cho container */
+.content-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Chia màn hình thành 4:2 */
+    gap: 20px; /* Khoảng cách giữa các phần */
+    padding: 20px;
+    background-color: #f8f8f8; /* Màu nền nhẹ để phân biệt */
+    height: calc(100vh - 140px); /* Chiều cao trừ đi chiều cao của navbar */
+    box-sizing: border-box; /* Để padding không làm tăng chiều rộng */
+}
+
+/* Cài đặt cho phần chính */
+.main-content {
+    /* background-color: #fff; */
+    padding: 20px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    border-radius: 5px;
+    height: 100%;
+    overflow-y: auto; /* Thanh cuộn nếu nội dung quá dài */
+}
+
+/* Cài đặt cho sidebar */
+.sidebar {
+    background-color: rgba(247, 242, 224, 0.6);  /* Màu nền với độ mờ 50% */
+    padding: 20px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    border-radius: 5px;
+    height: 100%;
+    overflow-y: auto; /* Thanh cuộn nếu nội dung quá dài */
+}
+
+/* Cài đặt cho navbar để cố định trên cùng */
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    padding: 10px 20px;
+    position: fixed; /* Cố định navbar trên cùng */
+    top: 0;
+    z-index: 10;
+}
+
+/* Đẩy nội dung xuống dưới khi có navbar cố định */
+body {
+    padding-top: 90px; /* Đẩy xuống bằng chiều cao của navbar */
+}
+
+/* UPDATE TRUYEN */
+/* .main-content { max-width: 600px; margin: 50px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); } */
+h2 { text-align: center; margin-bottom: 20px; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; }
+.form-group input, .form-group textarea, .form-group select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px; }
+.form-group textarea { resize: vertical; }
+.form-group button { width: 100%; padding: 10px; background-color: #28a745; border: none; border-radius: 5px; color: #fff; cursor: pointer; }
+.form-group button:hover { background-color: #218838; }
+
+
+/* btn gui the loai */
+#add-theloai-btn:hover {
+    background-color: #E6DB7F;  /* Màu đậm hơn khi hover */
+}

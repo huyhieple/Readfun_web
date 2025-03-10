@@ -1,0 +1,93 @@
+/* Đặt nền và cấu trúc cơ bản */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #F4F3F3;
+}
+
+/* Tạo khoảng trống để nội dung không bị che */
+body {
+    padding-top: 90px;
+    background-color: #F4F3F3;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #F4F3F3;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    position: sticky;
+    top: 90px;
+}
+
+/* Menu chính */
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px;
+}
+
+/* Các mục menu */
+.navbar-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 10px; /* Bo tròn các mục menu */
+    transition: background-color 0.3s ease;
+    /* background-color: rgba(53, 116, 189, 0.47); Màu nền #3574BD với độ trong suốt 47% */
+}
+
+.navbar-menu a:hover {
+    background-color: #C9F2F6;
+}
+
+/* Dropdown và menu con */
+.dropdown {
+    position: relative;
+    border-radius: 10px;  /* Bo tròn dropdown */
+    background-color: rgba(53, 116, 189, 0.47);  /* Màu nền với độ trong suốt 47% */
+}
+
+.dropdown-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 150px); /* 3 cột với độ rộng cố định 150px */
+    grid-template-rows: repeat(8, auto);     /* 8 hàng tự mở rộng */
+    gap: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    max-width: 500px;           /* Giới hạn chiều rộng tối đa của menu */
+    max-height: 400px;          /* Giới hạn chiều cao tối đa của menu */
+    overflow: auto;             /* Tạo thanh cuộn nếu tràn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Đổ bóng để nổi bật hơn */
+    list-style: none;           /* Bỏ bullet tròn đằng trước item */
+    border-radius: 10px;        /* Bo tròn menu con */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: grid;  /* Hiện menu khi hover */
+}
+
+/* Các mục trong dropdown-menu */
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    transition: background-color 0.3s;
+    border-radius: 5px;  /* Bo tròn các mục menu con */
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover */
+}

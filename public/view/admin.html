@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title> Readfun </title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Doc truyen, tieu thuyet" />
+    <meta name="author" content="hiperose" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/admin/admin.css" />
+    <link rel="stylesheet" href="../css/admin/navbar.css" />
+    <link rel="stylesheet" href="../css/admin/search.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <!-- logo    -->
+        <a class="navbar-brand" href="#">
+            <img id="logo" src="../../image/logo/logo.png" alt="Logo" width="70" height="70">
+        </a>
+        <h1 id='Readfun' style="color: #FFF090;"> Readfun </h1>
+        <!-- search -->
+        <div class="search-container">
+            <div class="search-box">
+                <span class="search-icon">
+                    <img src="../../image/public/search.png" alt="Search">
+                </span>
+                <input type="text" class="search-input" id="search-input" placeholder="Tìm kiếm thể loại có sẵn">
+            </div>
+        </div>
+        <!-- <div class="auth-buttons">
+            <button class="btn login-btn" onclick="window.location.href='login.html'">Login</button>
+            <button class="btn signup-btn" onclick="window.location.href='signup.html'">Signup</button>
+        </div> -->
+        
+        <!-- Thêm ô nhập thể loại mới và nút gửi -->
+        <div class="add-theloai-container" style="display: flex; flex-direction: column; gap: 5px; margin-left: 20px;">
+            <label for="new-theloai" style="color: #ede194; font-weight: bold;">Thêm thể loại mới:</label>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <input type="text" id="new-theloai" placeholder="Nhập thể loại mới" 
+                       style="padding: 5px; border-radius: 8px; border: 1px solid #ccc;">
+                <button id="add-theloai-btn" 
+                    style="padding: 5px 10px; background-color: #FFF090; border: none; cursor: pointer; border-radius: 8px;
+                        transition: background-color 0.3s;">
+                   Gửi
+               </button>
+            </div>
+        </div>
+        
+
+    <div id="add-result" style="display:none; margin-top: 10px; color: #FFF090;"></div>
+    </nav>
+    <!-- <nav class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-item dropdown">
+                <a class="nav-link">Thể Loại</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Adventure</a></li>
+                    <li><a class="dropdown-item" href="#">Anime</a></li>
+                    <li><a class="dropdown-item" href="#">Comedy</a></li>
+                    <li><a class="dropdown-item" href="#">Drama</a></li>
+                    <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                    <li><a class="dropdown-item" href="#">Horror</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav> -->
+    <!-- Nội dung chính chia 4:2 -->
+<div class="content-container">
+    <!-- Phần chiếm 2/3 (4 phần) -->
+    <div class="main-content">
+        <h2 style="margin-top: -15px;">Thêm truyện</h2>
+        
+         <!-- Thêm enctype="multipart/form-data" để hỗ trợ upload file -->
+    <form action="/admin/addTruyen" method="POST" enctype="multipart/form-data">
+
+        <!-- Tên truyện -->
+        <div class="form-group">
+            <label for="name">Tên truyện:</label>
+            <input type="text" id="name" name="name" placeholder="Nhập tên truyện" required>
+        </div>
+
+        <!-- Tác giả -->
+        <div class="form-group">
+            <label for="author">Tác giả:</label>
+            <input type="text" id="author" name="author" placeholder="Nhập tên tác giả"required>
+        </div>
+
+        <!-- Thể loại  -->
+        <div class="form-group">
+            <label for="theloai">Thể loại:</label>
+            <input type="text" id="theloai" name="theloai" placeholder="Nhập thể loại" required>
+        </div>
+        
+        <!-- Mô tả -->
+        <div class="form-group">
+            <label for="description">Mô tả:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Nhập mô tả" required></textarea>
+        </div>
+
+        <!-- Trạng thái -->
+        <div class="form-group">
+            <label for="status">Trạng thái:</label>
+            <select id="status" name="status" required>
+                <option value="">Chọn trạng thái</option>
+                <option value="Đang tiến hành">Đang tiến hành</option>
+                <option value="Hoàn thành">Hoàn thành</option>
+                <option value="Tạm ngưng">Tạm ngưng</option>
+            </select>
+        </div>
+
+        <!-- Ảnh bìa là file upload -->
+        <div class="form-group">
+            <label for="image">Ảnh bìa (file):</label>
+            <input type="file" id="image" name="image" accept="image/*">
+        </div>
+
+        <!-- Nút cập nhật -->
+        <div class="form-group">
+            <button type="submit">Thêm truyện</button>
+        </div>
+    </form>
+    
+    </div>
+
+    <!-- Phần chiếm 1/3 (2 phần) -->
+    <div class="sidebar">
+        <h2>Kết quả tìm kiếm</h2>
+        <div id="search-results"></div>  
+    </div>
+    <script src="../js/ajax/ajx_searchTheloai.js"></script>
+    <script src="../js/ajax/ajx_addTheloai.js"></script>
+    
+
+</div>
+    
+</body>
+</html>
