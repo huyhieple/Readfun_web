@@ -2,13 +2,6 @@
 // const mysql = require("mysql2");
 const mysql = require('mysql2/promise');
 
-// Tạo kết nối
-// const db = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "Lhh37440123.",
-//     database: "readfun"
-// });
 const pool = mysql.createPool({
     host: "localhost",
     user: "root",
